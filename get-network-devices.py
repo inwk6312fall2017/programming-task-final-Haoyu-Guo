@@ -73,9 +73,8 @@ def getNetworkDevices(ticket):
 	
 	#Iterate through network device data and print the id and series name of each device
 	for i in r_json["response"]:
-		print(i["id"] + "   " + '{:53}'.format(i["series"]) + "  " + i["reachabilityStatus"])
-		
-
+		print(i["id"] + "   " + i["series"])
 
 theTicket=getTicket()
 getNetworkDevices(theTicket)
+
